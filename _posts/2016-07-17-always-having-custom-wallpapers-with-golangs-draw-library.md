@@ -8,6 +8,7 @@ guid: http://blog.pettigrew.rocks/?p=9
 permalink: /2016/07/17/always-having-custom-wallpapers-with-golangs-draw-library/
 categories:
   - golang
+  - image effects
 ---
 If you&#8217;re like me, then you like to constantly have new wallpapers. I often even have scripts to automatically switch my wallpapers. So naturally, I decided that I wanted to always have custom wallpapers with my name on them. And, what better way to achieve this than with Golang&#8217;s draw libraries? So here were my project goals:
   
@@ -25,7 +26,7 @@ Here&#8217;s our mask.
 
 and here&#8217;s a sample output.
   
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg" alt="Sample Image" width="840" height="560" class="alignnone size-large wp-image-16" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-300x200.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-768x512.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1200x800.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg" alt="Sample Image" width="840" height="560" class="alignnone size-large wp-image-16" srcset="https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg 1024w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-300x200.jpg 300w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-768x512.jpg 768w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1200x800.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
   
 The go app takes the input image, flips it, inverts the colors, then draws this new image on the original in the area allowed by our mask. Let&#8217;s start by writing the code to read in our source images.
 
@@ -160,15 +161,15 @@ if err != nil {
 
 And we should now have a fancy wallpaper to use. Here are some more sample outputs.
 
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/bridge-1024x659.jpg" alt="bridge" width="840" height="541" class="alignnone size-large wp-image-38" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/bridge-1024x659.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge-300x193.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge-768x494.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge-1200x772.jpg 1200w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge.jpg 1400w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/bridge-1024x659.jpg" alt="bridge" width="840" height="541" class="alignnone size-large wp-image-38" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/bridge2-1024x683.jpg" alt="bridge2" width="840" height="560" class="alignnone size-large wp-image-39" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/bridge2-1024x683.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge2-300x200.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge2-768x512.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge2-1200x800.jpg 1200w, https://pettigrew.rocks/wp-content/uploads/2016/07/bridge2.jpg 1600w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/bridge2-1024x683.jpg" alt="bridge2" width="840" height="560" class="alignnone size-large wp-image-39" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/hill-1024x769.jpg" alt="hill" width="840" height="631" class="alignnone size-large wp-image-40" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/hill-1024x769.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/hill-300x225.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/hill-768x577.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/hill-1200x901.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/hill-1024x769.jpg" alt="hill" width="840" height="631" class="alignnone size-large wp-image-40" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/jump-1024x683.jpg" alt="jump" width="840" height="560" class="alignnone size-large wp-image-41" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/jump-1024x683.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/jump-300x200.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/jump-768x512.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/jump-1200x800.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/jump-1024x683.jpg" alt="jump" width="840" height="560" class="alignnone size-large wp-image-41" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
-<img src="http://pettigrew.rocks/wp-content/uploads/2016/07/trees-1024x683.jpg" alt="trees" width="840" height="560" class="alignnone size-large wp-image-42" srcset="https://pettigrew.rocks/wp-content/uploads/2016/07/trees-1024x683.jpg 1024w, https://pettigrew.rocks/wp-content/uploads/2016/07/trees-300x200.jpg 300w, https://pettigrew.rocks/wp-content/uploads/2016/07/trees-768x512.jpg 768w, https://pettigrew.rocks/wp-content/uploads/2016/07/trees-1200x801.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/trees-1024x683.jpg" alt="trees" width="840" height="560" class="alignnone size-large wp-image-42" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
 I hope this post was a good introduction into Golang&#8217;s image and draw libraries. I went over just a couple of possible transforms one could apply to an image. A challenge to the reader is to add different image manipulations to create even cooler output images. Also, remember that the code for this post can be found on <a href="https://github.com/john-pettigrew/wallpaper-customizer" target="_blank">my Github page</a>.
 
