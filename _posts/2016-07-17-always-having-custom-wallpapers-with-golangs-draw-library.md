@@ -26,7 +26,7 @@ Here&#8217;s our mask.
 
 and here&#8217;s a sample output.
   
-<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg" alt="Sample Image" width="840" height="560" class="alignnone size-large wp-image-16" srcset="https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg 1024w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-300x200.jpg 300w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-768x512.jpg 768w, https://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1200x800.jpg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
+<img src="http://blog.pettigrew.rocks/wp-content/uploads/2016/07/wallpaper2_min-1024x683.jpg" alt="Sample Image" width="840" height="560" class="alignnone size-large wp-image-16" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
   
 The go app takes the input image, flips it, inverts the colors, then draws this new image on the original in the area allowed by our mask. Let&#8217;s start by writing the code to read in our source images.
 
